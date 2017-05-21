@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat - | openssl rsautl -encrypt -inkey $1 -pubin
