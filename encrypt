@@ -1,3 +1,8 @@
 #!/bin/bash
-
+if [[ $# -gt 1 ]]
+then
+echo "do"
+cat - | openssl rsautl -encrypt -inkey $1 -pubin -out $2
+else
 cat - | openssl rsautl -encrypt -inkey $1 -pubin
+fi
